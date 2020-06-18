@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+//일반적으로 생성자 함수의 앞글자는 자바처럼 대문자
+	function Person(name, phone, addr){
+		this.name = name //동적으로 name변수 만들어서 값을 대입해줌...
+		this.phone = phone
+		this.addr = addr
+		
+		this.info = function(){
+			var msg = ""
+			for(let key in this){
+				if((typeof this[key] != "function"))
+					msg += key + " : " + this[key] + "<br>"
+			}
+			document.write(msg)
+		}
+	}
+	
+	var p = new Person("구재희", "010-2323-2323", "광명시")
+	
+	console.log(p)  // 콘솔에서 보면 타입이 Person이라고 나옴! 새로 만든 객체이므로!
+	p.info()
+
+
+	document.write("<hr>")
+	var p2 = new Person()
+	p2.info()
+	
+	
+	//객체에 프로토타입 만들면, p p2 에도 aaa가 생김!!!
+	Person.prototype.aaa = function(){
+		alert("aaa")
+	}
+	
+	console.log(p)
+	p.aaa()
+	
+	document.write("p instanceof Person : " + (p instanceof Person) + "<br>")
+	document.write("p instanceof Object : " + (p instanceof Object) + "<br>")
+	
+	//재정의...
+	Person.prototype.aaa = function(){
+		alert("change...")
+	}
+	p.aaa()
+	p2.aaa()
+	
+	//p의 aaa만 재정의
+	p.aaa = function(){
+		alert('p에서 정의한 aaa()')
+	}
+	p.aaa()
+	p2.aaa()
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

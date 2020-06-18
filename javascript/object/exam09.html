@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	
+	class Person{
+		
+		constructor(name, phone, addr){
+			this._name = name;	//변수 접근할때 _를 관습적으로 써줌으로써 쉽게 접근 못하도록?함
+			this._phone = phone;
+			this._addr = addr;
+		}
+		
+		//getter setter. 
+		get name(){
+			return this._name
+		}
+		set name(name){
+			this._name = name
+		}
+		
+		get phone(){
+			return this._phone
+		}
+		set phone(phone){
+			this._phone = phone
+		}
+		
+		get addr(){
+			return this._addr
+		}
+		set addr(addr){
+			this._addr = addr
+		}
+		
+		info(){
+			alert(`name : ${this._name}\nphone : ${this._phone}\naddr : ${this._addr}`)
+		}
+	}
+	
+	class Doctor extends Person{  //프로토타입 상속해줌
+		constructor(name, phone, addr, major){
+			super(name, phone, addr) // class안의 super는 우리가 아는 이미 있는 함수...
+			this._major = major
+		}
+	
+		set major(major){
+			this._major = major
+		}
+		get major(){
+			return this._major
+		}
+	}
+	
+	
+	let person = new Person("홍길동", "010-1111", "강남");
+	console.log(person);
+	person.info();
+	alert("name : " + person.name) //애러 안남. _name이 불러지는게 아니라 name()이란느 getter를 자동으로 실행해줌.
+	
+	
+	let doctor = new Doctor("나최고", "101", "서울")
+	console.log(doctor)
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

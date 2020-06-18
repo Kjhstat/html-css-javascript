@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	
+	function aaa(){
+		alert("call aaaa()")
+	}
+	function aaa(data){
+		alert("call aaaa(data)")
+	}
+	function aaa(a,b){
+		alert("call aaaa(a,b)")
+	}
+	
+	function aaa(){
+		switch(arguments.length){
+		case 0:
+			alert("call aaa()")
+			break
+		case 1:
+			alert("data :" + arguments[0])
+			break
+		case 2:
+			alert("a : " + argument[0] + ", b :" + argument[1])
+			break
+		}
+	}
+	
+	aaa("hello", 20)
+	
+	aaa(10,20,30,40,50) //	맞는거 없어도 마지악에 선언된 것이 호출됨
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

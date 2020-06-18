@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	// Hoisting(호이스팅) -> 막써도 선언부가 올라가서 그거에 맞게 실행되는 거...
+	// hoisting 발생 x -> let, const
+	
+	var a = 10;
+	let b = 20;
+	const c = 30;		// const -> 상수. 값 바꿀 수 없다!
+	alert(`a = ${a}, b = ${b}, c = ${c}`);
+	
+	a = a * 5;
+	b = b * 5;
+//	c = c * 5;	//여기서 오류 ! const는 값 바꿀 수 없음
+	alert(`a = ${a}, b = ${b}, c = ${c}`);
+	
+	var a = 100;
+//	let b = 100;	// 이미 선언 된 것. let은 hoisting x. 따라서 오류
+	alert(`a = ${a}, b = ${b}, c = ${c}`);
+	
+	{
+		var temp = 1000;
+		let letTemp = 2000;
+		alert(`temp : ${temp}, letTemp : ${letTemp}`);
+	}
+	alert(`temp : ${temp}, letTemp : ${letTemp}`); 
+	// 실행 안됨. let, const는 block안에서 만들어지면 안에서만 사용할 수 있음.
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

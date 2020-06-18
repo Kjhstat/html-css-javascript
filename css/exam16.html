@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#numberList li {
+		float : left;
+		margin : 0px 20px 0px 0px;
+		list-style: none;
+		/* list-style-image: url('../html/images/lemon.jpg') */ 
+	}
+	li:first-child {
+		color:orange;
+	}
+	li:last-child {
+	color: blue;
+	}
+	li:nth-child(2n) {
+		color : green;
+	}
+	
+	a {
+		mergin : 30px;
+	}
+	
+	p {
+	 	clear : left;  /*  float : left 속성  p태그에서는 무효화 하고싶을때... left 대신 both쓰면 left right 상관없이 무효화 */
+	}
+	
+	a:link {
+		color : lime;
+		text-decoration: none; /* 밑줄 ... */
+	}
+	
+	a:visited {
+		color : lime; /* 기본에 방문한 링크는 보라색으로 바뀌지만 여기서 설정 가능 */
+	}
+	
+	a:hover {
+		background-color:lightgray;
+		text-decoration : underline;
+	}
+	:root {
+		font-weight:bold;
+	}
+	
+</style>
+</head>
+<body>
+
+	<ul id = "numberList">
+		<li>ONE</li>
+		<li>TWO</li>
+		<li>THREE</li>
+		<li>FOUR</li>
+		<li>FIVE</li>
+		<li>SIX</li>
+		<li>SEVEN</li>
+		<li>EIGHT</li>
+		<li>NINE</li>
+		<li>TEN</li>
+		
+	</ul>
+	<p>
+		<a href = "http://www.naver.com">NAVER</a>
+		<a href = "http://www.daum.net">DAUM</a>		
+	</p>
+</body>
+</html>

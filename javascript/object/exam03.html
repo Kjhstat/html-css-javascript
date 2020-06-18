@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var person = {
+			"name" : "홍길동",
+			"phone" : "010-2363-9260",
+			'addr' : "경기도 광명시",
+			'info' : function(){
+				
+						/* 
+						alert("name : " + this.name + "\n"
+							+ "phone : " + this.phone + "\n"
+							+ "addr : " + this.addr) //반드시 this. 붙여야함
+							 */
+					
+						/* 	
+						let msg = ""
+						
+						with(this){ //this 객체 안에서 돌아가라!
+							msg += "name : " + name + '\n'
+							msg += "phone : " + phone + '\n'
+							msg += "addr : " + addr + '\n'
+						}
+						alert(msg)
+						 */
+						 
+						 for(var key in this){ //person["name"] , person["phone"] ... 이거랑 같음
+							 
+							//if(key != "info")
+							if((typeof this[key] != "function"))	 //typeof 의 결과값은 string임 그래서 "function"
+								document.write(key + " : " + this[key] + "<br>")
+						 }
+			}
+	}
+	alert(person.toString())  //모든 객체는 object 상속받으므로 toString() 정의 안해도 사용할 수 있음. 나에게 맞게 다시 만들 수 있음
+	alert(person) //원래는 내부적으로 toString() 호출하여 print 해줌
+	
+	person.toString = function(){
+		let msg = ''
+		for(let key in this){
+			if((typeof this[key] != "function"))
+				msg += `${key} : ${this[key]} <br>`
+		}
+		return msg
+	}
+	
+	document.write(person.toString())
+	docutment.write("<hr>")
+	
+	with(person){
+		info()
+	}
+	
+	person.info()
+</script>
+</head>
+<body>
+
+</body>
+</html>

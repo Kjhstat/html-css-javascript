@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!--
+	
+	<form>
+		<input type=""> 
+	  			type	text(한줄입력) 
+	  					password(사용자가 입력할때 안보이게하는거)
+	  					checkbox(다중선택)
+	  					radio(단일선택)
+	  					button(사용자 정의 이벤트)
+	  					file(첨부파일 전송)
+	  					reset(초기화)
+	  					hidden(입력받지 않은 데이터 전송)
+	  					submit(form태그 안의 입력받은 모든 데이터를 server에 전송)
+		<textarea></textarea> 		여러줄 입력. 자기소개서...
+	</form>  					
+	-->
+	
+	<form action = "http://www.naver.com">
+		<fieldset>
+			<label>아이디   : <input type = "text" size = "20"></label><br>
+			<label for="pwd">비밀번호 :</label> <input type = "password" size = "20" id="pwd"><br> 
+		</fieldset>
+		
+		<br>
+		
+		<fieldset>
+		<legend>희망연봉</legend><br>
+			<input type = "radio" name = "salary"> 2500~2800<br>
+			<input type = "radio" name = "salary"> 2800~3100<br>
+			<input type = "radio" name = "salary"> 3100~3600<br>
+			<input type = "radio" name = "salary"> 3600~4200<br>
+			<input type = "radio" name = "salary"> 4200 이상<br>		
+		</fieldset>
+		
+		<br>
+		
+		<strong>사용언어(중복선택 가능)</strong> <br>
+		<input type = "checkbox" name = "lang"> JAVA <br>
+		<input type = "checkbox" name = "lang"> C <br>
+		<input type = "checkbox" name = "lang"> C++ <br>
+		<input type = "checkbox" name = "lang"> JavaScript <br>
+		
+		<br>
+		
+		<strong>취미(중복선택 가능)</strong><br>
+		<input type = "checkbox" name = "hobby">코딩<br>
+		<input type = "checkbox" name = "hobby">개발<br>
+		<input type = "checkbox" name = "hobby">디버깅<br>
+		<input type = "checkbox" name = "hobby">해킹<br>
+		
+		<br>
+		<strong>자기소개</strong><br>
+		<textarea rows="5" cols="50"></textarea><br>
+		
+		<strong>첨부파일</strong><br>
+		<input type = "file" size = "50"><br>
+		<br>
+		
+		<input type = "button" value = "버튼"> 
+		<button>버튼2</button>
+		<button type = "reset">초기화</button>
+		<button type = "submit">제출</button>
+		<br>
+		
+		<input type = "submit" value = "제출">
+	</form>
+	
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+
+</body>
+</html>

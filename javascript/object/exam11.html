@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var data = new String("Hello JAVASCRIPT")
+	document.write("data : " + data + "<br>")
+	
+	String.prototype.change = function(){
+		return this.toUpperCase().bold().fontcolor("red").link("http://www.naver.com")// css 적용시키기
+	}
+	document.write("change() : " + data.change() + "<br>")
+	
+	var str = "Hello world"
+	
+	document.write("length : " + str.length + "<br>")
+	document.write("3번재 문자 : " + str.charAt(2) + "<br>")
+	document.write("0번재 문자 아스키코드 : " + str.charCodeAt(0) + "<br>")
+	document.write("concat('!!!') : " + str.concat("!!!") + "<br>")
+	document.write("search('llo') : " + str.search("llo!") + "<br>")
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

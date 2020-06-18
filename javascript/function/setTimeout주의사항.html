@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+	//closer함수로 문제 해결
+	// return에 function주어서 i를 유지!
+	var func = func(i){
+		return setTimeout(function(){
+			alert(i)
+		},0)
+	}
+	for(var i = 0; i <3; i++){
+		func(i)
+	}
+	
+
+
+	/* 
+	//setTimeout이 실행되는 시점은 for문이 다 돌고나서야 실행됨. 그래서 3 3 3 이 찍힘
+	//이 문제를 해결하기 위해 closer 씀...
+	for(var i = 0; i <3 ; i++){
+		setTimeout(function(){
+			alert(i)
+		},0)
+	}
+	 */
+	
+	/* 
+	alert("첫번째...")
+	
+	setTimeout(function(){
+		alert("setTimeout()...")
+	}, 0)  
+	//0초 뒤 -> 바로 실행하라는 의미. 하지만 setTimeout이 시행될때 제어권이 넘어가므로 아래있는 alert가 시행됨
+	
+	alert("두번째...")
+	 */
+	 
+</script>
+</head>
+<body>
+
+</body>
+</html>

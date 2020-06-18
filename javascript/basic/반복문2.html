@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+	let cnt = 0;
+	//do while -> 반복할지 말지 미리 물어봄
+	do{
+		let name = prompt("이름 : ");
+		let age = prompt("나이 : ");
+		age = Number(age);
+		alert(name + "의 10년 후의 나이는" + (age + 10) + "세 입니다.");
+		alert(cnt++ + "번 수행되었습니다.")
+	}while(confirm("계속하시겠습니까?"));
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

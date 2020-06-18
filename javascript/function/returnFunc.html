@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+
+	// 지역변수인 msg를 유지하고 싶을때 retrun함수를 사용!!
+	function returnFunc(name){
+		var msg = "Welcome " + name + "!"
+		
+		//익명함수 리턴! -> closer 라고 함
+		return function(){
+			alert(msg);
+		}
+	}
+	
+	//함수 사용하고 msg는 사라지므로 msg 사용 못함...
+//	returnFunc()
+//	alert(msg)
+	
+	// 함수 안의 함수 호출
+	returnFunc("KOO")()
+
+	
+	// 콜백함수 -> 매개변수가 함수인 경우.  리턴함수 -> 리턴값이 함수인 경우
+
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

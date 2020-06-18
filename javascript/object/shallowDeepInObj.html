@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var person = {
+			name : "홍길동",
+			phone : "010-1111-1111",
+			toString : function(){
+				let msg = ""
+				for(let key in this){
+					if((typeof this[key]) != "function")
+					msg += key + " : " + this[key] + "<br>"
+				}
+				msg += "<hr>"
+				return msg
+			}
+	}
+
+	//얕은 복사
+	var person2 = person;
+	
+	document.write(person.toString())
+	document.write(person2.toString())
+	
+	person2.phone = "010-9999-9999"
+	document.write(person.toString())
+	document.write(person2.toString())
+	
+	//깊은 복사
+	function clone(obj){
+		let object = {};
+		for(let key in obj){
+			object[key] = obj[key]
+		}
+		return object
+	}
+	var person3 = clone(person);  // 함수 만들어 이용...
+	
+	//전개연산자 이용한 깊은 복사
+	var person4 = {...peron}
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

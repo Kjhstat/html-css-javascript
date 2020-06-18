@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+
+	var comNum = new Array()
+	var sb = "";
+	
+	for (var i = 0; i < 3; i++) {
+		comNum[i] = Math.floor(Math.random() * 10)
+		for (var j = 0; j < i; j++) {
+			if (comNum[i] == comNum[j]) {
+				i = i - 1
+				comNum.pop()
+			}
+		}
+	}
+	
+	var sb = prompt("정답은 (" + comNum + ") 입니까?")
+	alert(parseInt(sb))
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

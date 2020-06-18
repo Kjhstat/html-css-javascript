@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+ 	
+ 	function Person(n, p, a){
+		 // this.name =n 이렇게 하면 속성값으로 저장되어, 누군가가 console.log로 접근하해서 name을 바꿀 수 있음... -> 보안 취약
+		 let name = n;  //이렇게 하면 지역변수라 접근 못함!!
+		 let phone = p;
+		 let addr = a;
+		 
+		 //this.getName = () => name
+		 this.getName = function(){
+			 return name
+		 }
+		 		 
+		 this.setName = function(n){
+			 name = n
+		 }
+	 }
+ 	
+ 	let p = new Person("홍길동", "010-1111-2222", "경기도 광명시")
+// 	console.log(p)
+	alert("Name : "+p.getName())
+	p.setName("홍길길")
+	alert("Name : "+p.getName())
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

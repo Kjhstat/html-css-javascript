@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+/*
+	2. 코드 실행함수. 문자열이 자바스크립트 코드이면 실행됨.
+		eval(str)
+*/
+
+	var str = "alert('hello');"
+	str += "var number = 10;"
+	str += "alert(number);"
+	str += "var array = [10, 12.34, true, 'good'];"
+	str += "alert(array);"
+	
+	eval(str)		//str이 자바스크립트 문법이면 그것을 실행함
+	
+	
+	//위에서 실행된 number 남아 있음!
+	number += 30
+	alert("number : "+ number )
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

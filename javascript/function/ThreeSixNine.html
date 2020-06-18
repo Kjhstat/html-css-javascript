@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+	var num = prompt("10 - 100사이의 숫자를 입력 : ");
+	var bbo = "숑";
+	
+	for(var i = 1; i <= num; i++){
+		var num10 = parseInt(i/10);
+		var num1 = i % 10;
+		
+		var num10Bool = (num10 != 0 && (num10 % 3 == 0 || num10 % 6 == 0 || num10 % 9 == 0));
+		var num1Bool = (num1 != 0 && (num1 % 3 == 0 || num1 % 6 == 0 || num1 % 9 == 0));
+		
+		
+		if ( (num10Bool == true && num1Bool == false) || (num10Bool == false && num1Bool == true) ) {
+			document.write("짝");
+			//System.out.println("짝");
+			
+			if(num1 == 0){
+				bbo = "뽀" + bbo
+				document.write(bbo)
+			}
+			document.write("<br>")	
+			
+		} else if(num1 == 0){
+			bbo = "뽀" + bbo
+			document.write(bbo)
+			document.write("<br>")
+		} else if(num10Bool == true && num1Bool == true) {
+			document.write("짝짝");
+			//System.out.println("짝짝");
+			document.write("<br>")
+		} else {
+			document.write(i);
+			//System.out.println(i);
+			document.write("<br>")
+		}
+		
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

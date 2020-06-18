@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function func01() {
+		document.write(arguments[0] + " : " + arguments[1] + " : " + arguments[2] + "<br>")
+	}
+	
+	function func02() {
+		for(let i of arguments){
+			document.write(i + " : ")
+		}
+		document.write("<br>")
+	}
+	
+	// 전개 연산자 ... -> 내가 함수 사용할 때의 개수로 알아서 해줌. numbers는 배열 형태!
+	function func03(...numbers){
+		document.write(numbers)
+	}
+	
+	fucntion func04(a,b, ...numbers){
+		document.write('a : ' + a +  "<br>")
+		document.write('b : ' + b +  "<br>")
+		document.write('numbers : ' + numbers +  "<br>")
+	}
+	
+	var array = [1,2,3]
+	
+	func04(...array) // a -> 1, b - > 2, numbers -> 3
+	func04(...array, ...array)
+	
+/* 	
+	func01(array)   		// 1,2,3 : undefined : undefined
+	func01.apply(null, array)	// aapply : 함수를 호출하는 함수
+	
+	func01(...array)	    //이런 식으로 함수 호출할때 주로 사용!
+	func03(array)   		// 함수가 전개 연산자 이면 바로 됨 
+	 */
+	
+//	func03(10,20,30)	
+//	func01(10,20,30)
+//	func01(10,20)
+//	func02(10,20,30)
+//	func02(10,20)
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

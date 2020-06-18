@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function Person(name, phone, addr){
+		this.name = name //동적으로 name변수 만들어서 값을 대입해줌...
+		this.phone = phone
+		this.addr = addr
+	}
+	
+	//이 부분은 공통인 부분이므로 prototype
+	Person.prototype.info = function(){
+			var msg = ""
+			for(let key in this){
+				if((typeof this[key] != "function"))
+					msg += key + " : " + this[key] + "<br>"
+			}
+			document.write(msg)
+		}
+	
+	let person = new Person("hong", "0110", "경기도")
+	person.info()
+	
+	
+	
+	
+	//그런데 의사도 사람임... name, phone, addr을 가지고 있음! -> 상속인것처럼 사용하면 좋을듯
+	function Doctor(name, phone, addr, major){
+	//1. call 함수 이용 -> this의미 : Persondl 아니라 Doctor(this)의 것으로 선언해라라는 의미!
+	//	Person.call(this, name, phone, addr)
+	//  Person.call(this, ...arguments)
+	
+	//2. apply이용. 이게 좋음?
+		Person.apply(this, arguments) //Person의 변수를 arguments로 가져와서 Doctor(this)에 apply 해줌!!
+	
+	//3. 내가 만든 super것에 Person 넣음. 함수로 들어감(Person이 함수이므로...)!
+		this.super = Person
+		this.super(name, phone, addr) // Person이 호출되어 들어간 name, phone, addr이 Doctor에 들어감!
+		
+		this.major = major
+	}
+	
+	//프로토 타입은 따로 상속 안받기 때문에 이 작업 해야 프로토타입 상속받을 수 있음
+	Doctor.prototype = Person.prototype
+	
+	let doctor = new Doctor("koo", "010-232323", "강남", "성형외과")
+	console.log(doctor)
+	
+	document.write("person instanceof Person : " + (person instanceof Person) + "<br>")
+	document.write("doctor instanceof Doctor : " + (doctor instanceof Doctor) + "<br>")
+	document.write("doctor instanceof Person : " + (doctor instanceof Person) + "<br>")
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

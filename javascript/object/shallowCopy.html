@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var array = [10,20,30,40]
+	var copyArray = array
+	
+	document.write("array : " + array + "<br>")
+	document.write("copyArray : " + copyArray + "<br>")
+	document.write("<hr>")
+	
+	copyArray[2] = 1000;
+	document.write("array : " + array + "<br>")		//이것도 바뀜. 주소값이 같은 shallow copy이므로...
+	document.write("copyArray : " + copyArray + "<br>")
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

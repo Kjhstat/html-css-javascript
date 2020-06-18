@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{
+	width : 500px;
+	height : 500px;
+	background-color:red;
+	transition-property : background-color, border-radius; /* 애니메이션 효과 주기 */
+	transition-duration : 1s; /* 바로 바뀌지 않고 1초에 걸쳐서 변형 */
+	transition-timing-function : linear;
+	transition-delay : 0.5s; /* 0.5초 후에 변형 시작 */
+	}
+	
+	div:hover {
+	background-color:blue;
+	border-radius : 50%;
+	}
+</style>
+</head>
+<body>
+
+	<div></div>
+
+</body>
+</html>

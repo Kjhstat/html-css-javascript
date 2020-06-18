@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var array = ['A', 10, 12.32, "hello", true, null];		//자바스크립트는 array에 모든 자료형 올 수 있다. R의 list와 같음!
+	
+	document.write(array[0] + "<br>");
+	document.write(array[1] + "<br>");
+	document.write(array[2] + "<br>");
+	document.write(array[3] + "<br>");
+	document.write(array[4] + "<br>");
+	document.write(array[5] + "<br>");
+	
+	document.write(array[6] + "<br>");			//undefined로 나옴. -> 자바와 다르게 에러 안생김. undefined는 연산 못함.
+	document.write(array[6] + array[1]);
+	
+	document.write("arrary : " + array + "<br>");
+	
+	array[9] = false;   //값 대입
+	document.write("arrary : " + array + "<br>");
+	
+	document.write("배열의 원소 개수 : " + array.length + "개<br>");
+	
+	array[array.length] = "add";
+	document.write("arrary : " + array + "<br>");
+	
+	array.push("add2");  //이렇게 stack처럼 끝에 넣을 수 있음
+	document.write("arrary : " + array + "<br>");
+	
+	var num = array.pop();   //stack에서 값 제거하는 식으로 맨 끝에거 제거됨
+	document.write("[" + num + "] 제거");
+	
+	var str = "hello World!!!";
+	document.write(str + "의 길이 : " + str.length);
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

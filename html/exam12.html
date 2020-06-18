@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	
+	<!-- HTML5이전 embed : <embed src = "playlist/Wildlife.wmv">  -->
+	HTML5버전 : <br>
+	<audio src="playlist/Kalimba.mp3" controls autoplay="autoplay"></audio>
+	<hr>
+	
+	<h3>HIML5이전 : embed tag 이용</h3>
+	<embed src = "playlist/movie.mp4">
+	
+	<h3>HIML5이전 : object tag 이용</h3>
+	<object data = "playlist/movie.mp4"></object>
+	
+	<h3>HTML5버전 : video tab 이용</h3>
+	<video src="playlist/movie.mp4" controls width = "400" height = "300"></video>
+	
+	<video controls width = "400" height = "300">
+		<source src="playlist/movie.mp4" > <!-- 이렇게 따로 source태그 사용 가능... -->
+ 	</video>
+ 	
+ 	<hr>
+ 	<h3>YouTube영상 삽입</h3>
+ 	<iframe width="560" height="315" 
+	 	src="https://www.youtube.com/embed/Mn3qh0XrLcc" 
+	 	frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+	 	allowfullscreen>
+ 	</iframe>
+ 	
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	p:only-child{   /* 자식이 오직 하나 있는 곳에만 적용. 단 그 자식이 p태그여야함 */
+		color:red;
+	}
+	
+	p:only-of-type{ /* 자식이 몇개든 상관없지만, 그 중에 p태그가 1개만 있어야함  */
+		background-color:yellow;
+	}
+</style>
+</head>
+<body>
+	<p> good!!!</p>
+	<h3> 안녕~~~ </h3>
+	<div>
+		<p>Hello world</p>
+	</div>
+</body>
+</html>

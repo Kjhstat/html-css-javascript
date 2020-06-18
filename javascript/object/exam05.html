@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function makePerson(name, phone, addr){
+		var p = {
+			"name" : name,
+			"phone" : phone,
+			"addr" : addr,
+			info : function(){
+				let msg = "";
+				for(let key in this){
+					if(key != "info")
+					msg += key + " : " + this[key] + "<br>"
+				}
+				document.write(msg)
+			}
+		}
+		return p;
+	}
+	
+	var person = makePerson("홍길동", "010-2222-2222", "경기도 광명시")
+	person.info();
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
